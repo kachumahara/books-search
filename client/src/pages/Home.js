@@ -15,7 +15,7 @@ class Home extends Component {
     message: "Search For A Book To Begin",
   };
 
-  handleInputChange = (event) => {
+  handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
@@ -26,24 +26,24 @@ class Home extends Component {
     API.getBooks(this.state.query)
       .then((res) =>
         this.setState({
-          books: res.data,
+          books: res.data
         })
       )
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query",
+          message: "No New Books Found, Try a Different Query"
         })
       );
   };
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit = event => {
     event.preventDefault();
     this.getBooks();
   };
 
-  handleBookSave = (id) => {
-    const book = this.state.books.finds((book) => book.id === id);
+  handleBookSave = id => {
+    const book = this.state.books.find(book => book.id === id);
 
     API.saveBook({
       googleId: book.id,
@@ -83,9 +83,9 @@ class Home extends Component {
         <Row>
           <Col size="md-12">
             <Card title="Results">
-              {this.state.length ? (
+              {this.state.books.length ? (
                 <List>
-                  {this.state.books.map((book) => (
+                  {this.state.books.map(book => (
                     <Book
                       key={book.id}
                       title={book.volumeInfo.title}

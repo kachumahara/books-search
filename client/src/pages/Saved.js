@@ -60,7 +60,7 @@ class Saved extends Component {
                       image={books.image}
                       Button={() => (
                         <button
-                          onClick={() => this.handleBookDelete(book._id)}
+                          onClick={() => this.handleBookDelete(books._id)}
                           className="btn btn-danger ml-2"
                         >
                           Delete
@@ -75,6 +75,7 @@ class Saved extends Component {
             </Card>
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }
