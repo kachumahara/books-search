@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+// import Book from "../../images/googlebk.jpeg";
 import "./style.css";
 
 class Nav extends Component {
