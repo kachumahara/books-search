@@ -52,7 +52,7 @@ class Home extends Component {
       link: book.volumeInfo.infoLink,
       authors: book.volumeInfo.authors,
       description: book.volumeInfo.description,
-      image: book.volumeInfo.imageLinks.thumbnail,
+      image: book.volumeInfo.imageLinks.thumbnail
     }).then(() => this.getBooks());
   };
 
@@ -106,7 +106,7 @@ class Home extends Component {
                   ))}
                 </List>
               ) : (
-                <h2 classname="text-center">{this.state.message}</h2>
+                <h2 className="text-center">{this.state.message}</h2>
               )}
             </Card>
           </Col>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({ query, handdleInputChange, handleFormSubmit }) {
+function Form({ query, handleInputChange, handleFormSubmit }) {
   return (
     <form>
       <div className="form-group">
@@ -14,7 +14,7 @@ function Form({ query, handdleInputChange, handleFormSubmit }) {
           value={query}
           placeholder="Book's Name"
           name="query"
-          onChange={handdleInputChange}
+          onChange={handleInputChange}
           required
         />
       </div>
